@@ -1,12 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout') {
-            steps {
-                // Realiza o checkout do repositório
-                checkout scm
-            }
-        }
         stage('Build Application') {
             steps {
                 dir('erik-timezone-app') {
