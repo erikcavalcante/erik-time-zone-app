@@ -162,5 +162,20 @@ output application/json
 					</ee:variables>
             </ee:transform>
 		</on-error-propagate>
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="10e256b6-7138-4490-8fba-24f6a5176673" type="HTTP:BAD_REQUEST">
+			<ee:transform doc:name="Transform HTTP Error1" doc:id="0198f3bc-187f-4512-b110-531288046901">
+				<ee:message>
+					<ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+    description: error.description,
+}]]></ee:set-payload>
+				</ee:message>
+				<ee:variables>
+					<ee:set-variable variableName="httpStatus"><![CDATA[400]]></ee:set-variable>
+				</ee:variables>
+			</ee:transform>
+		</on-error-propagate>
 	</error-handler>
 </mule>
