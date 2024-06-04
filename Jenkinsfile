@@ -11,7 +11,7 @@ pipeline {
         stage('MUnit Tests') {
             steps {
                 dir('erik-timezone-app') {
-                    sh 'mvn test -Dtest=*Test'
+                    sh 'mvn test'
                 }
             }
         }
