@@ -15,7 +15,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<app.runtime>4.6.3</app.runtime>
+		<app.runtime>4.6-java8</app.runtime>
 		<mule.maven.plugin.version>4.1.0</mule.maven.plugin.version>
 	</properties>
 
@@ -46,7 +46,7 @@
 						<workerType>Micro</workerType>
 						<applicationName>erik-timezone-app</applicationName>
 						<password>Erik@1994</password>
-						<muleVersion>4.6.3</muleVersion>
+						<muleVersion>4.6-java8</muleVersion>
 						<objectStoreV2>true</objectStoreV2>
 					</cloudHubDeployment>
 				</configuration>
