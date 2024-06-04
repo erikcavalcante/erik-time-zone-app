@@ -8,6 +8,13 @@ pipeline {
                 }
             }
         }
+        stage('MUnit Tests') {
+            steps {
+                dir('erik-timezone-app') {
+                    sh 'mvn test -Dtest=*Test'
+                }
+            }
+        }
         stage('Deploy Cloudhub') {
             steps {
                 dir('erik-timezone-app') {
